@@ -1,0 +1,10 @@
+{
+  "name": "should-i-deploy-discord-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matheus Calegaro <matheuscalegaro@outlook.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  }
+}
