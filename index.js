@@ -16,17 +16,17 @@ app.listen(process.env.PORT, () => {
 });
 
 setInterval(() => {
-  http.get(`${process.env.PROJECT_DOMAIN}.glitch.me/`);
+  http.get(`https://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
 client.once('ready', () => {
-	console.log('Ready!');
+	console.log(`${new Date().toISOString()} INFO - Bot ready!`);
 });
 
 const prefix = '!';
 
 client.on('message', async message => {
-  if (message.content.startsWith(`${prefix}deploy`)) {
+  if (message.content.startsWith(`${prefix}candeploy`)) {
     try {
       const response = await fetch('https://shouldideploy.today/api?tz=America/Sao_Paulo');
       const data = await response.json();
@@ -35,8 +35,6 @@ client.on('message', async message => {
     } catch (err) {
       message.channel.send(`❌ ERROR! ${err.message}`);
     }
-  } else {
-    message.channel.send('Available commands: `!deploy`');
   }
 });
 
