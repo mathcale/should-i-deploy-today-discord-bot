@@ -31,9 +31,9 @@ client.on('message', async message => {
       const response = await fetch('https://shouldideploy.today/api?tz=America/Sao_Paulo');
       const data = await response.json();
 
-      message.channel.sendMessage(`${data.shouldideploy ? '👍' : '👎'} ${data.message}`);
+      message.channel.send(`${data.shouldideploy ? '👍' : '👎'} ${data.message}`);
     } catch (err) {
-      message.channel.sendMessage(`❌ ERROR! ${err.message}`);
+      message.channel.send(`❌ ERROR! ${err.message}`);
     }
   }
 });
