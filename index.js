@@ -27,13 +27,13 @@ client.once("ready", () => {
   console.log(`${new Date().toISOString()} INFO - Bot ready!!`);
 });
 
-const prefix = "!";
+const prefix = "~";
 
 client.on("message", async message => {
   if (message.content.startsWith(`${prefix}candeploy`)) {
     try {
       const response = await fetch(
-        "https://shouldideploy.today/api?tz=America/Sao_Paulo"
+        "http://shouldideploy.today/api?tz=America/Sao_Paulo"
       );
       const data = await response.json();
 
