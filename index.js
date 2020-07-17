@@ -35,6 +35,8 @@ client.on('message', async message => {
     } catch (err) {
       message.channel.send(`❌ ERROR! ${err.message}`);
     }
+  } else {
+    message.channel.send('Available commands: `!deploy`');
   }
 });
 
