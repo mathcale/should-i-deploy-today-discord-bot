@@ -1,6 +1,6 @@
 # Should I Deploy Today?
 
-Probably not, but this Discord bot can help you to discover that!
+Probably **no**, but this Discord bot can help you to discover that!
 
 This is a joke project created for my friends, don't take it too seriously.
 
